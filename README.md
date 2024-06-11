@@ -1,5 +1,8 @@
 ### Hi there 👋
 
+![download](https://github.com/robertonetoz/robertonetoz/assets/133679859/959e4f34-b4eb-4b75-9eb3-15745d587062)
+
+
 <!--
 **robertonetoz/robertonetoz** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
