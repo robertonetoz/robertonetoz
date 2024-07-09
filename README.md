@@ -54,3 +54,7 @@
 <img align="right" height="200" src="https://media.tenor.com/giNrzT0tQGsAAAAi/bonfire-dark-souls.gif"  />
 
 ###
+
+<div align="center">
+  <img src="https://spotify-recently-played-readme.vercel.app/api?user=7yzbsh5smfsetrmm4hng3cm82"  />
+</div>
