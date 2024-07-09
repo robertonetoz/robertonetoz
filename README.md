@@ -2,7 +2,11 @@
 
 ###
 
-<p align="left">Hello World!!</p>
+<h4 align="left">Seja bem-vindo(a)!</h4>
+
+###
+
+<p align="left">Me chamo Roberto estou cursando Análise e Desenvolvimento de Sistemas no Instituto Master de Ensino Presidente Antônio Carlos (IMEPAC), atualmente no 4º período</p>
 
 ###
 
@@ -26,6 +30,8 @@
   <img src="https://skillicons.dev/icons?i=css" height="40" alt="css3 logo"  />
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=js" height="40" alt="javascript logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=react" height="40" alt="react logo"  />
 </div>
 
 ###
@@ -35,20 +41,9 @@
 ###
 
 <div align="left">
-  <img src="https://github-readme-stats.vercel.app/api?username=robertonetoz&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=tokyonight&locale=en&hide_border=false&order=1" height="150" alt="stats graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=robertonetoz&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=midnight-purple&hide_border=false&order=2" height="150" alt="languages graph"  />
+  <img src="https://github-readme-stats.vercel.app/api?username=robertonetoz&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=false&count_private=true&disable_animations=false&theme=midnight-purple&locale=en&hide_border=false&order=1" height="150" alt="stats graph"  />
 </div>
-
-###
-
-<img align="left" height="200" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmVkc2ZkeWc4MXQ3Nnh5NDllYmdvZ2M3M2t2OHRndHQ3bHZjeHh4OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EJujiIR5o82wOYgyVd/giphy.webp"  />
-
-###
-
-<img align="left" height="200" src="https://media1.tenor.com/m/zO8-QtJypUgAAAAd/darkness.gif"  />
-
-###
-
-<img align="left" height="200" src="https://media.tenor.com/giNrzT0tQGsAAAAi/bonfire-dark-souls.gif"  />
 
 ###
 
@@ -56,6 +51,6 @@
 
 ###
 
-<img align="right" height="200" src="https://media.tenor.com/V7bbzi_E1QIAAAAi/bloodborne-fromsoftware.gif"  />
+<img align="right" height="200" src="https://media.tenor.com/giNrzT0tQGsAAAAi/bonfire-dark-souls.gif"  />
 
 ###
