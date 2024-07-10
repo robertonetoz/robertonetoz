@@ -1,4 +1,10 @@
-<img align="left" height="195" src="https://media.tenor.com/V7bbzi_E1QIAAAAi/bloodborne-fromsoftware.gif"  />
+<div align="center">
+  <img height="200" src="https://camo.githubusercontent.com/24a531d901de0f343818ac5ded7fca0572ab2d194d2c87ec7e869667d1ac82b7/68747470733a2f2f6d656469612e74656e6f722e636f6d2f67694e727a54307451477341414141692f626f6e666972652d6461726b2d736f756c732e676966"  />
+</div>
+
+###
+
+<img align="left" height="135" src="https://camo.githubusercontent.com/8dae24f23d38a18c0d415ed12dfac4b27ce4b52e01d41f395182e306331fcc78/68747470733a2f2f6d656469612e74656e6f722e636f6d2f563762627a695f4531514941414141692f626c6f6f64626f726e652d66726f6d736f6674776172652e676966"  />
 
 ###
 
@@ -6,11 +12,7 @@
 
 ###
 
-<h4 align="left">Seja bem-vindo(a)!</h4>
-
-###
-
-<p align="left">Me chamo Roberto estou cursando Análise e Desenvolvimento de Sistemas no Instituto Master de Ensino Presidente Antônio Carlos (IMEPAC), atualmente no 4º período</p>
+<p align="left">Seja bem-vindo(a)!<br><br>Me chamo Roberto estou cursando Análise e Desenvolvimento de Sistemas no Instituto Master de Ensino Presidente Antônio Carlos (IMEPAC), atualmente no 4º período</p>
 
 ###
 
@@ -48,10 +50,6 @@
   <img src="https://github-readme-stats.vercel.app/api?username=robertonetoz&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=false&count_private=true&disable_animations=false&theme=midnight-purple&locale=en&hide_border=false&order=1" height="135" alt="stats graph"  />
   <img src="https://github-readme-stats.vercel.app/api/top-langs?username=robertonetoz&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=midnight-purple&hide_border=false&order=2" height="135" alt="languages graph"  />
 </div>
-
-###
-
-<img align="right" height="200" src="https://media.tenor.com/giNrzT0tQGsAAAAi/bonfire-dark-souls.gif"  />
 
 ###
 
