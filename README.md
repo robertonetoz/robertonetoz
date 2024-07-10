@@ -1,3 +1,7 @@
+<img align="left" height="195" src="https://media.tenor.com/V7bbzi_E1QIAAAAi/bloodborne-fromsoftware.gif"  />
+
+###
+
 <h2 align="left">About Me</h2>
 
 ###
@@ -6,7 +10,7 @@
 
 ###
 
-<p align="left">Me chamo Roberto, e estou cursando Análise e Desenvolvimento de Sistemas no Instituto Master de Ensino Presidente Antônio Carlos (IMEPAC), atualmente no 4º período</p>
+<p align="left">Me chamo Roberto estou cursando Análise e Desenvolvimento de Sistemas no Instituto Master de Ensino Presidente Antônio Carlos (IMEPAC), atualmente no 4º período</p>
 
 ###
 
@@ -41,13 +45,9 @@
 ###
 
 <div align="left">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=robertonetoz&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=midnight-purple&hide_border=false&order=2" height="150" alt="languages graph"  />
-  <img src="https://github-readme-stats.vercel.app/api?username=robertonetoz&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=false&count_private=true&disable_animations=false&theme=midnight-purple&locale=en&hide_border=false&order=1" height="150" alt="stats graph"  />
+  <img src="https://github-readme-stats.vercel.app/api?username=robertonetoz&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=false&count_private=true&disable_animations=false&theme=midnight-purple&locale=en&hide_border=false&order=1" height="135" alt="stats graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=robertonetoz&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=midnight-purple&hide_border=false&order=2" height="135" alt="languages graph"  />
 </div>
-
-###
-
-<img align="right" height="200" src="https://media.tenor.com/txECdK7fodoAAAAi/blood-born-doll.gif"  />
 
 ###
 
@@ -58,3 +58,5 @@
 <div align="left">
   <img src="https://spotify-recently-played-readme.vercel.app/api?user=7yzbsh5smfsetrmm4hng3cm82"  />
 </div>
+
+###
