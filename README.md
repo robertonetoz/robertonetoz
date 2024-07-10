@@ -12,10 +12,13 @@
 
 ###
 
-<p align="left">Seja bem-vindo(a)!<br>
+  ***Seja bem-vindo(a)!*** 
+  
   Me chamo Roberto, e estou cursando Análise e Desenvolvimento de Sistemas no Instituto Master de Ensino Presidente Antônio Carlos (IMEPAC), atualmente no 4º período </p>
 
-###
+
+
+<hr>
 
 ***Techs - Using and Learning***
 
@@ -39,18 +42,25 @@
   <img src="https://skillicons.dev/icons?i=react" height="40" alt="react logo"  />
 </div>
 
-###
+
+
+<hr>
 
 ***Stats***
 
-<div align="left">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=beatriznarf&locale=en&hide_title=false&layout=compact&card_width=120&langs_count=5&theme=midnight-purple&hide_border=false&order=2" height="120" alt="languages graph"/>
-  <img src="https://github-readme-stats.vercel.app/api?username=beatriznarf&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=false&count_private=true&disable_animations=false&theme=midnight-purple&locale=en&hide_border=false&order=1" height="120" alt="stats graph"/>
- </div>
 
-###
+<div align="left">
+  <img src="https://github-readme-stats.vercel.app/api?username=robertonetoz&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=false&count_private=true&disable_animations=false&theme=midnight-purple&locale=en&hide_border=false&order=1" height="120" alt="stats graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=robertonetoz&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=midnight-purple&hide_border=false&order=2" height="120" alt="languages graph"  />
+</div>
+
+
+
+
+<hr>
 
 ***Social Media***
+
 
 <div align="left">
   <a href="https://api.whatsapp.com/send?phone=5534984286696" target="_blank">
