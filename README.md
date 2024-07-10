@@ -1,4 +1,4 @@
-<img align="center" height="215" src="https://media.tenor.com/txECdK7fodoAAAAi/blood-born-doll.gif"  />
+<img align="right" height="215" src="https://media.tenor.com/txECdK7fodoAAAAi/blood-born-doll.gif"  />
 
 ###
 
