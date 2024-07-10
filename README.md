@@ -1,18 +1,18 @@
-<img align="left" height="200" src="https://camo.githubusercontent.com/24a531d901de0f343818ac5ded7fca0572ab2d194d2c87ec7e869667d1ac82b7/68747470733a2f2f6d656469612e74656e6f722e636f6d2f67694e727a54307451477341414141692f626f6e666972652d6461726b2d736f756c732e676966"  />
+<img align="right" height="200" src="https://media.tenor.com/txECdK7fodoAAAAi/blood-born-doll.gif"  />
 
 ###
 
-<div align="left">
-  <img height="200" src="https://media.tenor.com/txECdK7fodoAAAAi/blood-born-doll.gif"  />
+<div align="right">
+  <img height="175" src="https://camo.githubusercontent.com/24a531d901de0f343818ac5ded7fca0572ab2d194d2c87ec7e869667d1ac82b7/68747470733a2f2f6d656469612e74656e6f722e636f6d2f67694e727a54307451477341414141692f626f6e666972652d6461726b2d736f756c732e676966"  />
 </div>
 
 ###
 
-<h2 align="left">About Me</h2>
+<img align="left" height="100" src="https://camo.githubusercontent.com/8dae24f23d38a18c0d415ed12dfac4b27ce4b52e01d41f395182e306331fcc78/68747470733a2f2f6d656469612e74656e6f722e636f6d2f563762627a695f4531514941414141692f626c6f6f64626f726e652d66726f6d736f6674776172652e676966"  />
 
 ###
 
-<img align="left" height="135" src="https://camo.githubusercontent.com/8dae24f23d38a18c0d415ed12dfac4b27ce4b52e01d41f395182e306331fcc78/68747470733a2f2f6d656469612e74656e6f722e636f6d2f563762627a695f4531514941414141692f626c6f6f64626f726e652d66726f6d736f6674776172652e676966"  />
+<h2 align="left">About Me</h2>
 
 ###
 
