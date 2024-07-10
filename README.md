@@ -17,9 +17,7 @@
 
 ###
 
-<h2 align="left">Techs - Using and Learning</h2>
-
-###
+***Techs - Using and Learning***
 
 <div align="left">
   <img src="https://skillicons.dev/icons?i=java" height="40" alt="java logo"  />
@@ -43,20 +41,16 @@
 
 ###
 
-<h2 align="left">Stats</h2>
-
-###
+***Stats***
 
 <div align="left">
-  <img src="https://github-readme-stats.vercel.app/api?username=robertonetoz&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=false&count_private=true&disable_animations=false&theme=midnight-purple&locale=en&hide_border=false&order=1" height="135" alt="stats graph"  />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=robertonetoz&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=midnight-purple&hide_border=false&order=2" height="135" alt="languages graph"  />
-</div>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=beatriznarf&locale=en&hide_title=false&layout=compact&card_width=120&langs_count=5&theme=midnight-purple&hide_border=false&order=2" height="120" alt="languages graph"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=beatriznarf&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=false&count_private=true&disable_animations=false&theme=midnight-purple&locale=en&hide_border=false&order=1" height="120" alt="stats graph"/>
+ </div>
 
 ###
 
-<h2 align="left">Social Media</h2>
-
-###
+***Social Media***
 
 <div align="left">
   <a href="https://api.whatsapp.com/send?phone=5534984286696" target="_blank">
