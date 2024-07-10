@@ -12,8 +12,8 @@
 
 ###
 
-  ***Seja bem-vindo(a)!*** 
-  <br>
+  ***Seja bem-vindo(a)!*** <br>
+  
   Me chamo Roberto, e estou cursando Análise e Desenvolvimento de Sistemas no Instituto Master de Ensino Presidente Antônio Carlos (IMEPAC), atualmente no 4º período 
   <br>
 
