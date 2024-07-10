@@ -13,8 +13,7 @@
         <hr style="margin: 0; border: 0; border-top: 2px solid black; width: 50%;">
         <p>Me chamo Roberto e estou cursando Análise e Desenvolvimento de Sistemas no Instituto Master de Ensino Presidente Antônio Carlos (IMEPAC), atualmente no 4º período.</p>
     </div>
-</div> <br><br><br>
-
+</div> <br>
 
 ## ***Techs - Using and Learning***
   <br>
