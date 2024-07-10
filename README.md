@@ -1,19 +1,19 @@
 
-<div align="center">
-  <img height="190" src="https://camo.githubusercontent.com/24a531d901de0f343818ac5ded7fca0572ab2d194d2c87ec7e869667d1ac82b7/68747470733a2f2f6d656469612e74656e6f722e636f6d2f67694e727a54307451477341414141692f626f6e666972652d6461726b2d736f756c732e676966"  />
-  <img height="215" src="https://media.tenor.com/txECdK7fodoAAAAi/blood-born-doll.gif" />
-</div>
+<div align="center" style="margin-bottom: 20px;">
+    <img height="200" src="https://camo.githubusercontent.com/24a531d901de0f343818ac5ded7fca0572ab2d194d2c87ec7e869667d1ac82b7/68747470733a2f2f6d656469612e74656e6f722e636f6d2f67694e727a54307451477341414141692f626f6e666972652d6461726b2d736f756c732e676966"/>  
+    <img height="200" src="https://media.tenor.com/txECdK7fodoAAAAi/blood-born-doll.gif"/>
+</div> 
 
-
-###
-
-<img align="left" height="108" src="https://camo.githubusercontent.com/8dae24f23d38a18c0d415ed12dfac4b27ce4b52e01d41f395182e306331fcc78/68747470733a2f2f6d656469612e74656e6f722e636f6d2f563762627a695f4531514941414141692f626c6f6f64626f726e652d66726f6d736f6674776172652e676966"  />
-
-###
-
-  ### ***Seja bem-vindo(a)!*** 
-  <hr>
-  Me chamo Roberto, e estou cursando Análise e Desenvolvimento de Sistemas no Instituto Master de Ensino Presidente Antônio Carlos (IMEPAC), atualmente no 4º período <br><br><br>
+<div style="display: flex; align-items: flex-start;">
+    <div>
+        <img align="left" height="110" src="https://camo.githubusercontent.com/8dae24f23d38a18c0d415ed12dfac4b27ce4b52e01d41f395182e306331fcc78/68747470733a2f2f6d656469612e74656e6f722e636f6d2f563762627a695f4531514941414141692f626c6f6f64626f726e652d66726f6d736f6674776172652e676966"/>
+    </div>
+    <div style="margin-left: 10px;">
+        <p><strong>Seja bem-vindo(a)!</strong></p>
+        <hr style="margin: 0; border: 0; border-top: 2px solid black; width: 50%;">
+        <p>Me chamo Roberto e estou cursando Análise e Desenvolvimento de Sistemas no Instituto Master de Ensino Presidente Antônio Carlos (IMEPAC), atualmente no 4º período.</p>
+    </div>
+</div> <br><br><br>
 
 
 ## ***Techs - Using and Learning***
