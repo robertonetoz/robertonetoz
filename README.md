@@ -14,8 +14,8 @@
 
   ***Seja bem-vindo(a)!*** <br>
   
-  Me chamo Roberto, e estou cursando Análise e Desenvolvimento de Sistemas no Instituto Master de Ensino Presidente Antônio Carlos (IMEPAC), atualmente no 4º período 
-  <br>
+  Me chamo Roberto, e estou cursando Análise e Desenvolvimento de Sistemas no Instituto Master de Ensino Presidente Antônio Carlos (IMEPAC), atualmente no 4º período <br><br><br>
+
 
 ***Techs - Using and Learning***
   <br>
