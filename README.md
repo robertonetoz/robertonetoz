@@ -1,16 +1,4 @@
 
-
-<div style="display: flex; align-items: flex-start;">
-    <div>
-        <img align="left" height="110" src="https://camo.githubusercontent.com/8dae24f23d38a18c0d415ed12dfac4b27ce4b52e01d41f395182e306331fcc78/68747470733a2f2f6d656469612e74656e6f722e636f6d2f563762627a695f4531514941414141692f626c6f6f64626f726e652d66726f6d736f6674776172652e676966"/>
-    </div>
-    <div style="margin-left: 10px;">
-        <p><strong>Seja bem-vindo(a)!</strong></p>
-        <hr style="margin: 0; border: 0; border-top: 2px solid black; width: 50%;">
-        <p>Me chamo Roberto e estou cursando Análise e Desenvolvimento de Sistemas no Instituto Master de Ensino Presidente Antônio Carlos (IMEPAC), atualmente no 4º período.</p>
-    </div>
-</div> <br>
-
 ## ***Techs - Using and Learning***
   <br>
 <div align="left">
