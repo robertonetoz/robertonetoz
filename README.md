@@ -2,8 +2,6 @@
   <img height="200" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExczFoYXg2NXRmN2pwd3FnYjRycGN0cjJvMmdiMHprYjA4NWZuMmNjNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o72EWFTPBCzLAodyM/giphy.gif"  />
 </div>
 
-###
-
 
 ## ***Techs - Using and Learning***
   <br>
