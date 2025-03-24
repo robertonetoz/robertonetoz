@@ -1,10 +1,3 @@
-<div align="center">
-  <img height="200" src="https://i.pinimg.com/originals/c9/6f/c3/c96fc34ab4d45f0e6c76c47804a3ae18.gif"  />
-</div>
-
-###
-
-
 ## ***Techs - Using and Learning***
   <br>
 <div align="left">
