@@ -11,7 +11,7 @@
 
 <h2 align="center"> <img src="/imgs/title1.png" width="25"/> <em>About  me </em></h2>
 
-<img src="https://i.pinimg.com/originals/47/f7/1d/47f71d7e352da00032e4be75df84b5c5.gif" width="250" align="right" style="margin-left: 20px;" />
+<img src="https://i.pinimg.com/originals/39/97/6b/39976b18d4a2475e7a5083a845415cb8.gif" width="250" align="right" style="margin-left: 20px;" />
 <br/>
 
 <p>
