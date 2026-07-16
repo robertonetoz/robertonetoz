@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LIXGRIM — GTA 5 & GTA 6 | Lives, Desafios e Comunidade</title>
+<meta name="description" content="Bem-vindo ao LIXGRIM! Conteúdo de GTA 5 hoje e GTA 6 no lançamento em primeira mão. Lives épicas, desafios e mitos. Siga em todas as redes." />
+<meta name="theme-color" content="#0a0510" />
+
+<!-- Open Graph / social preview -->
+<meta property="og:title" content="LIXGRIM — GTA 5 & GTA 6" />
+<meta property="og:description" content="Lives épicas, desafios e a jornada rumo ao GTA 6 desde o primeiro dia. Faça parte da comunidade!" />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Rajdhani:wght@500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --bg:#08040d;
+    --bg-2:#0e0716;
+    --purple:#9b30ff;
+    --purple-bright:#b866ff;
+    --violet:#7a1fd8;
+    --magenta:#ff3db4;
+    --pink:#ff6ec7;
+    --gold:#ffd23f;
+    --cyan:#22d3ee;
+    --white:#f4eefb;
+    --muted:#b9a9d0;
+    --glass:rgba(30,14,54,.55);
+    --ring:rgba(155,48,255,.45);
+    --font-impact:'Anton',sans-serif;
+    --font-display:'Bebas Neue',sans-serif;
+    --font-body:'Rajdhani',sans-serif;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--white);
+    font-family:var(--font-body);
+    overflow-x:hidden;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--magenta);color:#fff}
+  a{text-decoration:none;color:inherit}
+  img{max-width:100%;display:block}
+
+  /* ===== Animated background sky ===== */
+  .sky{
+    position:fixed;inset:0;z-index:-3;
+    background:
+      radial-gradient(120% 90% at 50% 120%, #ff8a3d 0%, #ff4d9d 22%, #9b30ff 48%, #3a0f66 70%, #0a0510 100%);
+    background-size:200% 200%;
+    animation:skyMove 18s ease-in-out infinite;
+  }
+  @keyframes skyMove{
+    0%,100%{background-position:50% 100%}
+    50%{background-position:50% 60%}
+  }
+  /* Sun glow */
+  .sun{
+    position:fixed;left:50%;bottom:-10vh;transform:translateX(-50%);
+    width:70vw;height:70vw;max-width:760px;max-height:760px;z-index:-2;
+    background:radial-gradient(circle, rgba(255,210,120,.55) 0%, rgba(255,109,199,.25) 30%, rgba(155,48,255,0) 62%);
+    filter:blur(6px);
+    animation:pulseSun 7s ease-in-out infinite;
+    pointer-events:none;
+  }
+  @keyframes pulseSun{0%,100%{opacity:.75;transform:translateX(-50%) scale(1)}50%{opacity:1;transform:translateX(-50%) scale(1.06)}}
+
+  /* City skyline silhouette */
+  .skyline{
+    position:fixed;left:0;right:0;bottom:0;z-index:-2;height:38vh;min-height:220px;
+    background:linear-gradient(to top, #08040d 8%, rgba(8,4,13,.6) 60%, transparent 100%);
+    pointer-events:none;
+  }
+  .skyline svg{position:absolute;bottom:0;width:100%;height:100%;opacity:.9}
+
+  /* grain + vignette */
+  .grain{
+    position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.06;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+  .vignette{position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background:radial-gradient(120% 80% at 50% 30%, transparent 55%, rgba(0,0,0,.6) 100%);}
+
+  /* Floating particles (money/embers) */
+  .particles{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+  .particle{position:absolute;bottom:-40px;font-size:18px;opacity:.0;animation:rise linear infinite;filter:drop-shadow(0 0 6px rgba(255,210,63,.6))}
+  @keyframes rise{
+    0%{transform:translateY(0) rotate(0);opacity:0}
+    10%{opacity:.9}
+    90%{opacity:.7}
+    100%{transform:translateY(-115vh) rotate(320deg);opacity:0}
+  }
+
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px;position:relative}
+
+  /* ===== NAV ===== */
+  header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.35s}
+  header.scrolled{background:rgba(8,4,13,.72);backdrop-filter:blur(14px);border-bottom:1px solid var(--ring)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:var(--font-impact);font-size:24px;letter-spacing:1px}
+  .brand .crown{color:var(--gold);filter:drop-shadow(0 0 8px var(--gold))}
+  .brand span{color:var(--white);text-shadow:0 0 18px var(--purple)}
+  .nav-cta{
+    font-family:var(--font-body);font-weight:700;font-size:15px;letter-spacing:.5px;
+    padding:9px 20px;border-radius:40px;color:#fff;
+    background:linear-gradient(135deg,var(--purple),var(--magenta));
+    box-shadow:0 0 20px var(--ring);transition:.25s;text-transform:uppercase;
+  }
+  .nav-cta:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 0 34px var(--magenta)}
+
+  /* ===== HERO ===== */
+  .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 22px 60px;position:relative}
+  .live-badge{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:7px 16px;border-radius:40px;margin-bottom:26px;
+    background:rgba(255,0,60,.12);border:1px solid rgba(255,61,180,.5);
+    font-weight:700;letter-spacing:2px;font-size:13px;text-transform:uppercase;
+    backdrop-filter:blur(6px);
+    animation:floaty 5s ease-in-out infinite;
+  }
+  .live-dot{width:9px;height:9px;border-radius:50%;background:#ff2d55;box-shadow:0 0 0 0 rgba(255,45,85,.7);animation:pulseDot 1.6s infinite}
+  @keyframes pulseDot{0%{box-shadow:0 0 0 0 rgba(255,45,85,.7)}70%{box-shadow:0 0 0 12px rgba(255,45,85,0)}100%{box-shadow:0 0 0 0 rgba(255,45,85,0)}}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+
+  .hero .welcome{font-family:var(--font-display);font-size:clamp(20px,4vw,34px);letter-spacing:6px;color:var(--pink);text-shadow:0 0 20px var(--magenta);opacity:.95}
+  .hero h1{
+    font-family:var(--font-impact);
+    font-size:clamp(72px,17vw,220px);
+    line-height:.86;letter-spacing:2px;
+    color:#fff;margin:2px 0 6px;
+    text-shadow:
+      0 0 8px rgba(255,255,255,.35),
+      0 6px 0 #4a1a80,
+      0 0 40px var(--purple),
+      0 0 80px var(--violet);
+    animation:heroGlow 4s ease-in-out infinite;
+    position:relative;
+  }
+  @keyframes heroGlow{
+    0%,100%{text-shadow:0 0 8px rgba(255,255,255,.35),0 6px 0 #4a1a80,0 0 40px var(--purple),0 0 80px var(--violet)}
+    50%{text-shadow:0 0 14px rgba(255,255,255,.6),0 6px 0 #4a1a80,0 0 60px var(--magenta),0 0 110px var(--purple)}
+  }
+  .hero h1 .flick{animation:flick 6s infinite}
+  @keyframes flick{0%,92%,100%{opacity:1}93%{opacity:.35}94%{opacity:1}96%{opacity:.5}97%{opacity:1}}
+
+  .tagline{max-width:640px;margin:16px auto 0;color:var(--muted);font-size:clamp(16px,2.4vw,21px);font-weight:600}
+  .tagline b{color:var(--white)}
+  .accent-line{width:130px;height:5px;margin:24px auto 0;border-radius:6px;background:linear-gradient(90deg,transparent,var(--magenta),var(--purple),transparent);box-shadow:0 0 20px var(--purple)}
+
+  .hero-btns{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:38px}
+  .btn{
+    font-family:var(--font-body);font-weight:700;font-size:17px;letter-spacing:1px;text-transform:uppercase;
+    padding:15px 34px;border-radius:46px;cursor:pointer;transition:.25s;position:relative;overflow:hidden;
+  }
+  .btn-primary{color:#fff;background:linear-gradient(135deg,var(--purple),var(--magenta));box-shadow:0 8px 30px rgba(155,48,255,.5)}
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 40px var(--magenta)}
+  .btn-ghost{color:#fff;background:rgba(255,255,255,.05);border:1.5px solid var(--ring);backdrop-filter:blur(6px)}
+  .btn-ghost:hover{border-color:var(--magenta);background:rgba(255,61,180,.12);transform:translateY(-3px)}
+  .btn .shine{position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);animation:shine 3.5s infinite}
+  @keyframes shine{0%{left:-120%}55%,100%{left:160%}}
+
+  .scroll-ind{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--muted);font-size:12px;letter-spacing:2px;text-transform:uppercase;animation:floaty 2.4s infinite}
+  .mouse{width:24px;height:38px;border:2px solid var(--ring);border-radius:14px;display:flex;justify-content:center;padding-top:6px}
+  .mouse::before{content:"";width:4px;height:8px;border-radius:3px;background:var(--purple-bright);animation:wheel 1.6s infinite}
+  @keyframes wheel{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(10px)}}
+
+  /* ===== TICKER ===== */
+  .ticker{background:linear-gradient(90deg,var(--violet),var(--magenta));padding:12px 0;overflow:hidden;white-space:nowrap;border-top:1px solid rgba(255,255,255,.15);border-bottom:1px solid rgba(255,255,255,.15);position:relative;z-index:1}
+  .ticker-track{display:inline-flex;gap:40px;animation:scrollX 22s linear infinite;font-family:var(--font-impact);font-size:20px;letter-spacing:2px;color:#fff}
+  .ticker-track span{display:inline-flex;align-items:center;gap:40px;text-shadow:0 2px 6px rgba(0,0,0,.4)}
+  .ticker .star{color:var(--gold)}
+  @keyframes scrollX{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+  /* ===== SECTIONS ===== */
+  section{position:relative;z-index:1}
+  .section-pad{padding:96px 0}
+  .kicker{font-family:var(--font-body);font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--pink);font-size:14px;text-align:center;text-shadow:0 0 16px var(--magenta)}
+  .section-title{font-family:var(--font-impact);font-size:clamp(38px,7vw,74px);text-align:center;line-height:.95;margin:10px 0 8px;color:#fff;text-shadow:0 0 30px var(--purple)}
+  .section-title em{font-style:normal;color:transparent;-webkit-background-clip:text;background-clip:text;background-image:linear-gradient(90deg,var(--purple-bright),var(--magenta))}
+  .section-sub{text-align:center;color:var(--muted);max-width:560px;margin:0 auto;font-size:17px;font-weight:600}
+
+  /* Content cards */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:54px}
+  .card{
+    background:var(--glass);border:1px solid rgba(155,48,255,.28);border-radius:20px;padding:30px 26px;
+    backdrop-filter:blur(10px);position:relative;overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s;
+    transform-style:preserve-3d;
+  }
+  .card::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at var(--mx,50%) var(--my,0%),rgba(255,61,180,.16),transparent 60%);opacity:0;transition:.3s}
+  .card:hover{border-color:var(--magenta);box-shadow:0 20px 50px rgba(155,48,255,.35)}
+  .card:hover::before{opacity:1}
+  .card .ic{font-size:38px;margin-bottom:14px;filter:drop-shadow(0 0 12px var(--purple))}
+  .card h3{font-family:var(--font-impact);font-size:26px;letter-spacing:.5px;color:#fff;margin-bottom:8px}
+  .card h3 b{color:var(--magenta)}
+  .card p{color:var(--muted);font-size:15.5px;font-weight:500}
+  .card .tag{display:inline-block;margin-top:14px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:30px;background:rgba(155,48,255,.18);border:1px solid var(--ring);color:var(--purple-bright)}
+
+  /* ===== SOCIAL ===== */
+  #redes{padding-top:40px}
+  .socials{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:52px}
+  .social{
+    display:flex;align-items:center;gap:16px;padding:20px 22px;border-radius:18px;
+    background:var(--glass);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(10px);
+    position:relative;overflow:hidden;transition:.28s;
+  }
+  .social::after{content:"→";margin-left:auto;font-size:22px;font-weight:700;color:var(--muted);transition:.28s}
+  .social:hover{transform:translateY(-5px);border-color:var(--brand,#fff)}
+  .social:hover::after{color:var(--brand,#fff);transform:translateX(5px)}
+  .social:hover{box-shadow:0 16px 40px -8px var(--brand)}
+  .social .icon{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;flex-shrink:0;background:var(--brand);box-shadow:0 0 22px -4px var(--brand)}
+  .social .icon svg{width:28px;height:28px;fill:#fff}
+  .social .meta{display:flex;flex-direction:column;gap:2px}
+  .social .meta .label{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .social .meta .handle{font-family:var(--font-impact);font-size:22px;letter-spacing:.5px;color:#fff}
+
+  /* Instagram gradient needs special bg */
+  .social.instagram .icon{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+  .social.instagram{--brand:#dc2743}
+  .social.tiktok{--brand:#25f4ee}
+  .social.tiktok .icon{background:#010101}
+  .social.youtube{--brand:#ff0000}
+  .social.kick{--brand:#53fc18}
+  .social.kick .icon{background:#53fc18}
+  .social.kick .icon svg{fill:#000}
+  .social.twitch{--brand:#9146ff}
+
+  /* ===== CTA BAND ===== */
+  .cta-band{margin:20px 0 0;text-align:center;padding:70px 22px;border-radius:28px;
+    background:linear-gradient(135deg,rgba(155,48,255,.25),rgba(255,61,180,.2));
+    border:1px solid var(--ring);position:relative;overflow:hidden}
+  .cta-band h2{font-family:var(--font-impact);font-size:clamp(34px,6vw,60px);line-height:.95;text-shadow:0 0 30px var(--purple)}
+  .cta-band h2 span{color:transparent;-webkit-background-clip:text;background-clip:text;background-image:linear-gradient(90deg,var(--gold),var(--magenta))}
+  .cta-band p{color:var(--muted);max-width:520px;margin:14px auto 26px;font-size:17px;font-weight:600}
+
+  /* ===== FOOTER ===== */
+  footer{padding:56px 22px 40px;text-align:center;border-top:1px solid var(--ring);margin-top:80px;background:rgba(8,4,13,.6)}
+  .foot-brand{font-family:var(--font-impact);font-size:40px;letter-spacing:2px;text-shadow:0 0 24px var(--purple)}
+  .foot-brand .crown{color:var(--gold);filter:drop-shadow(0 0 8px var(--gold))}
+  .foot-socials{display:flex;gap:14px;justify-content:center;margin:22px 0}
+  .foot-socials a{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);transition:.25s}
+  .foot-socials a svg{width:20px;height:20px;fill:var(--muted);transition:.25s}
+  .foot-socials a:hover{background:var(--purple);transform:translateY(-4px)}
+  .foot-socials a:hover svg{fill:#fff}
+  footer .copy{color:var(--muted);font-size:13.5px;font-weight:500;letter-spacing:.5px}
+  footer .copy a{color:var(--purple-bright)}
+
+  /* reveal on scroll */
+  .reveal{opacity:0;transform:translateY(40px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:560px){
+    .nav-cta{display:none}
+    .hero{padding-top:100px}
+    .card{padding:24px 20px}
+  }
+</style>
+</head>
+<body>
+
+<div class="sky"></div>
+<div class="sun"></div>
+<div class="skyline">
+  <svg viewBox="0 0 1440 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <g fill="#0a0512">
+      <rect x="0" y="150" width="60" height="150"/>
+      <rect x="70" y="90" width="45" height="210"/>
+      <rect x="120" y="180" width="70" height="120"/>
+      <rect x="195" y="60" width="38" height="240"/>
+      <rect x="240" y="130" width="80" height="170"/>
+      <rect x="330" y="200" width="55" height="100"/>
+      <rect x="395" y="100" width="42" height="200"/>
+      <rect x="445" y="160" width="90" height="140"/>
+      <rect x="545" y="40" width="34" height="260"/>
+      <rect x="588" y="140" width="70" height="160"/>
+      <rect x="665" y="190" width="60" height="110"/>
+      <rect x="735" y="80" width="48" height="220"/>
+      <rect x="790" y="150" width="85" height="150"/>
+      <rect x="885" y="110" width="40" height="190"/>
+      <rect x="935" y="185" width="75" height="115"/>
+      <rect x="1018" y="70" width="44" height="230"/>
+      <rect x="1070" y="150" width="80" height="150"/>
+      <rect x="1158" y="120" width="46" height="180"/>
+      <rect x="1212" y="195" width="66" height="105"/>
+      <rect x="1286" y="95" width="40" height="205"/>
+      <rect x="1334" y="160" width="106" height="140"/>
+    </g>
+    <g fill="#1a0b2e" opacity="0.9">
+      <rect x="200" y="120" width="120" height="180"/>
+      <rect x="560" y="90" width="140" height="210"/>
+      <rect x="980" y="130" width="130" height="170"/>
+    </g>
+  </svg>
+</div>
+<div class="particles" id="particles"></div>
+<div class="grain"></div>
+<div class="vignette"></div>
+
+<!-- NAV -->
+<header id="header">
+  <div class="wrap nav">
+    <div class="brand"><span class="crown">♛</span><span>LIXGRIM</span></div>
+    <a href="#redes" class="nav-cta">Seguir agora</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="live-badge"><span class="live-dot"></span>Ao vivo • GTA 5 &amp; GTA 6</div>
+  <div class="welcome">BEM-VINDO AO</div>
+  <h1>LIX<span class="flick">GRIM</span></h1>
+  <p class="tagline">Conteúdo de <b>GTA 5 hoje</b> e <b>GTA 6 no lançamento</b> em primeira mão. Desafios, mitos e <b>lives épicas</b> — acompanhe a jornada desde o primeiro dia.</p>
+  <div class="accent-line"></div>
+  <div class="hero-btns">
+    <a href="#redes" class="btn btn-primary"><span class="shine"></span>Seguir em todas as redes</a>
+    <a href="#conteudo" class="btn btn-ghost">Ver o conteúdo</a>
+  </div>
+  <div class="scroll-ind"><div class="mouse"></div>Role para baixo</div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span>GTA 5 HOJE <b class="star">★</b> GTA 6 NO LANÇAMENTO <b class="star">★</b> LIVES ÉPICAS <b class="star">★</b> DESAFIOS &amp; MITOS <b class="star">★</b> FAÇA PARTE DA COMUNIDADE <b class="star">★</b>&nbsp;</span>
+    <span>GTA 5 HOJE <b class="star">★</b> GTA 6 NO LANÇAMENTO <b class="star">★</b> LIVES ÉPICAS <b class="star">★</b> DESAFIOS &amp; MITOS <b class="star">★</b> FAÇA PARTE DA COMUNIDADE <b class="star">★</b>&nbsp;</span>
+  </div>
+</div>
+
+<!-- CONTEUDO -->
+<section id="conteudo" class="section-pad">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">O que rola no canal</div>
+      <h2 class="section-title">O <em>conteúdo</em></h2>
+      <p class="section-sub">Um mundo aberto de diversão. Entra pra vibe e não perde nenhum momento.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal" data-tilt>
+        <div class="ic">🎮</div>
+        <h3>GTA 5 <b>HOJE</b></h3>
+        <p>Gameplays, história, modo online e aquela zoeira. Todo dia rolando conteúdo novo em Los Santos.</p>
+        <span class="tag">No ar agora</span>
+      </div>
+      <div class="card reveal" data-tilt>
+        <div class="ic">🌴</div>
+        <h3>GTA 6 <b>NO LANÇAMENTO</b></h3>
+        <p>Cobertura completa desde o primeiro dia. Vice City em primeira mão, do hype ao game.</p>
+        <span class="tag">Em breve</span>
+      </div>
+      <div class="card reveal" data-tilt>
+        <div class="ic">🧪</div>
+        <h3>DESAFIOS <b>&amp; MITOS</b></h3>
+        <p>Testes malucos, easter eggs, teorias e os maiores mitos dos jogos investigados na prática.</p>
+        <span class="tag">Toda semana</span>
+      </div>
+      <div class="card reveal" data-tilt>
+        <div class="ic">🔴</div>
+        <h3>LIVES <b>ÉPICAS</b></h3>
+        <p>Transmissões ao vivo interagindo com a galera. Twitch, Kick e YouTube — escolhe a sua.</p>
+        <span class="tag">Ao vivo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REDES -->
+<section id="redes" class="section-pad">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Me segue e faça parte</div>
+      <h2 class="section-title">As <em>redes</em></h2>
+      <p class="section-sub">Segue em todas pra não perder nenhum conteúdo. É de graça e ajuda demais! 💜</p>
+    </div>
+    <div class="socials">
+      <a class="social instagram reveal" href="https://www.instagram.com/lixgrimm" target="_blank" rel="noopener">
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.6 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.35A6.45 6.45 0 1 0 18.45 12 6.45 6.45 0 0 0 12 5.55zm0 10.64A4.19 4.19 0 1 1 16.19 12 4.19 4.19 0 0 1 12 16.19zm6.7-10.9a1.5 1.5 0 1 0 1.5 1.5 1.5 1.5 0 0 0-1.5-1.5z"/></svg></span>
+        <span class="meta"><span class="label">Instagram</span><span class="handle">@lixgrimm</span></span>
+      </a>
+      <a class="social tiktok reveal" href="https://www.tiktok.com/@lixgrim" target="_blank" rel="noopener">
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M16.6 5.82a4.28 4.28 0 0 1-1-2.82h-3.1v12.2a2.55 2.55 0 0 1-2.55 2.55 2.55 2.55 0 1 1 .74-4.99V9.6a5.66 5.66 0 0 0-.74-.05 5.66 5.66 0 1 0 5.66 5.66V9.01a7.3 7.3 0 0 0 4.27 1.37V7.28a4.28 4.28 0 0 1-3.28-1.46z"/></svg></span>
+        <span class="meta"><span class="label">TikTok</span><span class="handle">@lixgrim</span></span>
+      </a>
+      <a class="social youtube reveal" href="https://www.youtube.com/@lixgrim" target="_blank" rel="noopener">
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M23 12s0-3.6-.46-5.32a2.78 2.78 0 0 0-1.96-1.96C18.86 4.26 12 4.26 12 4.26s-6.86 0-8.58.46a2.78 2.78 0 0 0-1.96 1.96C1 8.4 1 12 1 12s0 3.6.46 5.32a2.78 2.78 0 0 0 1.96 1.96c1.72.46 8.58.46 8.58.46s6.86 0 8.58-.46a2.78 2.78 0 0 0 1.96-1.96C23 15.6 23 12 23 12zM9.75 15.27V8.73L15.5 12z"/></svg></span>
+        <span class="meta"><span class="label">YouTube</span><span class="handle">LIXGRIM</span></span>
+      </a>
+      <a class="social kick reveal" href="https://kick.com/lixgrim" target="_blank" rel="noopener">
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M3 3h6v6h3V6h3V3h6v9h-3v3h-3v3h3v3h-3v-3h-3v-3H9v9H3z"/></svg></span>
+        <span class="meta"><span class="label">Kick</span><span class="handle">LixGrim</span></span>
+      </a>
+      <a class="social twitch reveal" href="https://www.twitch.tv/lixgrim" target="_blank" rel="noopener">
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M4 2 2.5 6v14h5v3h3l3-3h4l5-5V2zm16 11-3 3h-4l-3 3v-3H7V4h13zM15 7h-2v5h2zm-5 0H8v5h2z"/></svg></span>
+        <span class="meta"><span class="label">Twitch</span><span class="handle">LixGrim</span></span>
+      </a>
+      <a class="social reveal" style="--brand:#9b30ff" href="https://www.instagram.com/lixgrimm" target="_blank" rel="noopener">
+        <span class="icon" style="background:linear-gradient(135deg,#9b30ff,#ff3db4)"><svg viewBox="0 0 24 24"><path d="M12 2 3 6v6c0 5 3.8 9.7 9 11 5.2-1.3 9-6 9-11V6zm0 4.5a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm0 12c-2 0-3.8-1-5-2.5.9-1.6 3-2.5 5-2.5s4.1.9 5 2.5c-1.2 1.5-3 2.5-5 2.5z"/></svg></span>
+        <span class="meta"><span class="label">Comunidade</span><span class="handle">Entrar 👑</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-pad" style="padding-top:20px">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <div class="kicker">Bora nessa</div>
+      <h2>ME SIGA E FAÇA PARTE DA <span>COMUNIDADE!</span></h2>
+      <p>A jornada rumo ao GTA 6 já começou. Chega junto, ativa as notificações e não perde nenhuma live.</p>
+      <a href="#redes" class="btn btn-primary"><span class="shine"></span>Quero seguir 👑</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-brand"><span class="crown">♛</span> LIXGRIM</div>
+  <div class="foot-socials">
+    <a href="https://www.instagram.com/lixgrimm" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.6 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2z"/></svg></a>
+    <a href="https://www.tiktok.com/@lixgrim" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M16.6 5.82a4.28 4.28 0 0 1-1-2.82h-3.1v12.2a2.55 2.55 0 1 1-1.81-2.44V9.6a5.66 5.66 0 1 0 5.66 5.66V9.01a7.3 7.3 0 0 0 4.27 1.37V7.28a4.28 4.28 0 0 1-3.28-1.46z"/></svg></a>
+    <a href="https://www.youtube.com/@lixgrim" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 12s0-3.6-.46-5.32a2.78 2.78 0 0 0-1.96-1.96C18.86 4.26 12 4.26 12 4.26s-6.86 0-8.58.46a2.78 2.78 0 0 0-1.96 1.96C1 8.4 1 12 1 12s0 3.6.46 5.32a2.78 2.78 0 0 0 1.96 1.96c1.72.46 8.58.46 8.58.46s6.86 0 8.58-.46a2.78 2.78 0 0 0 1.96-1.96C23 15.6 23 12 23 12zM9.75 15.27V8.73L15.5 12z"/></svg></a>
+    <a href="https://kick.com/lixgrim" target="_blank" rel="noopener" aria-label="Kick"><svg viewBox="0 0 24 24"><path d="M3 3h6v6h3V6h3V3h6v9h-3v3h-3v3h3v3h-3v-3h-3v-3H9v9H3z"/></svg></a>
+    <a href="https://www.twitch.tv/lixgrim" target="_blank" rel="noopener" aria-label="Twitch"><svg viewBox="0 0 24 24"><path d="M4 2 2.5 6v14h5v3h3l3-3h4l5-5V2zm16 11-3 3h-4l-3 3v-3H7V4h13z"/></svg></a>
+  </div>
+  <p class="copy">© <span id="year"></span> LIXGRIM · Feito com 💜 pela comunidade · GTA é marca da Rockstar Games.</p>
+</footer>
+
+<script>
+  // year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // header scroll
+  const header = document.getElementById('header');
+  addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 30));
+
+  // reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  }, {threshold:.12});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{ el.style.transitionDelay = (i%4*70)+'ms'; io.observe(el); });
+
+  // particles (money + embers)
+  const box = document.getElementById('particles');
+  const emojis = ['💵','💰','✨','💜','👑'];
+  for(let i=0;i<22;i++){
+    const p = document.createElement('div');
+    p.className='particle';
+    p.textContent = emojis[Math.floor(Math.random()*emojis.length)];
+    p.style.left = Math.random()*100+'vw';
+    p.style.fontSize = (12+Math.random()*20)+'px';
+    p.style.animationDuration = (9+Math.random()*12)+'s';
+    p.style.animationDelay = (Math.random()*12)+'s';
+    box.appendChild(p);
+  }
+
+  // card 3D tilt + glow follow
+  document.querySelectorAll('[data-tilt]').forEach(card=>{
+    card.addEventListener('mousemove', e=>{
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX-r.left)/r.width, y=(e.clientY-r.top)/r.height;
+      card.style.transform = `perspective(700px) rotateY(${(x-.5)*10}deg) rotateX(${(.5-y)*10}deg) translateY(-6px)`;
+      card.style.setProperty('--mx', x*100+'%');
+      card.style.setProperty('--my', y*100+'%');
+    });
+    card.addEventListener('mouseleave', ()=> card.style.transform='');
+  });
+</script>
+</body>
+</html>
